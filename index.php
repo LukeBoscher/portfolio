@@ -34,7 +34,7 @@ $fout = login();
       <ul>
         <li><a href="#nav">Luke Boscher</a></li>
         <div class='nav'>
-          <li><a href="#pdftitle">Projecten</a></li>
+          <li><a href="#login">Projecten</a></li>
         </div>
       </ul>
     </nav>

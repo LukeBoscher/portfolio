@@ -1,22 +1,24 @@
 <?php
-$pdfs = array(
-  'Notulen' => 'notulen.pdf',
-  'titel2' => 'CafeOUI.pdf',
-  'titel3' => 'CafeOUI.pdf',
-  'titel4' => 'CafeOUI.pdf',
-  'titel5' => 'CafeOUI.pdf',
-  'titel6' => 'CafeOUI.pdf',
-  'titel7' => 'CafeOUI.pdf',
-  'titel8' => 'CafeOUI.pdf'
-
-);
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['pdf'])) {
-
-  $currentpdf = $pdfs[$_POST['pdf']];
-} else {
-  $currentpdf = 'OUIv3.pdf';
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
 }
+
+function login() {
+  global $fout;
+  $fout = '';
+  $password = 'dasfq1f42rg3rrwg324@#@FFQ!';
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (empty($_POST['password'])) {
+      $fout = '<h4 class="foutmelding">Please enter a password</h4>';
+    } elseif(!empty($_POST['password']) && $_POST['password'] == $password) {
+      header('Location: opdrachten.php');
+      exit;
+    } elseif (!empty($_POST['password']) && $_POST['password'] != $password) {
+      $fout = '<h4 class="foutmelding">Incorrect password</h4>';
+    }
+  }
+}
+$fout = login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,13 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['pdf'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
-  <link rel="stylesheet" href="css/style.css"> 
+  <link rel="stylesheet" href="css/style.css" type="text/css"> 
 </head>
 <body>
   <header>
-    <nav>
+    <nav id="nav">
       <ul>
-        <li><a href="#about">Luke Boscher</a></li>
+        <li><a href="#nav">Luke Boscher</a></li>
         <div class='nav'>
           <li><a href="#pdftitle">Projecten</a></li>
         </div>
@@ -41,27 +43,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['pdf'])) {
     <section id="about">
       <h2>Wie is Luke Boscher?</h2>
       <p>Welcome to my portfolio. I am an IT professional passionate about technology and programming.</p>
-      <h2 class='arrow'><a href="#projects">&darr;</a></h2>
+      <h2 class='arrow'><a href="#login">&darr;</a></h2>
     </section>
     <!-- <video id="background-video" autoplay muted>
       <source src="video/171409-845439667.mp4" type="video/mp4">
     </video> -->
   </div>
   <main>
-    <div class="pdfviewer">
-      <h2 id='pdftitle'>Projecten</h2>
-      <h3>&darr;Kies hier de pdf die je wilt zien&darr;</h3>
-      <form action="<?php echo $_SERVER['PHP_SELF']; ?>#pdftitle" method="POST">
-            <select name="pdf" id="pdfs" onchange="this.form.submit()">
-            <?php foreach ($pdfs as $title => $file): ?>
-                <option value="<?php echo $title; ?>" <?php echo (!empty($_POST['pdf']) && $_POST['pdf'] == $title) ? 'selected' : ''; ?>><?php echo $title; ?></option>
-            <?php endforeach; ?>
-            </select>
+    <section class="login" id="login">
+      <div class="logincontainer">
+        <form action="<?php echo login(); ?>" method="POST" class="loginform">
+          <h3>Portfolio Opdrachten</h3>
+          <input type="password" name="password" id="password" placeholder="Wachtwoord">
+          <input type="submit" value="Submit">
+          <?php
+            echo $fout;
+          ?>
         </form>
-      <?php
-        echo '<embed id="pdf-embed" src="pdf/'.$currentpdf.'" width="90%" height="90%">';
-      ?>
-    </div>
+      </div>
+    </section>
   </main>
   <footer>
     <p>&copy; Luke Boscher, 2024</p>

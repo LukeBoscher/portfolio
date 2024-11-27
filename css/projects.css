@@ -1,0 +1,15 @@
+:root{
+    --background: #FFF3F0;
+    --geel: #ECA72C;
+    --grijs:  #4D5061;
+    --grijzer: #3F414F;
+    --grijste: #30323D;
+    --text: #e4e4e4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    cursor: url(../cursor/tea.png), auto;
+
+}

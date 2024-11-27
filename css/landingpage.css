@@ -1,10 +1,10 @@
 :root{
     --background: #FFF3F0;
-    --rood: #A52422;
-    --paars: #414288;
-    --roze: #FFF3F0;
-    --groen: #44CF6C;
-    --text: #000000;
+    --links:#ECA72C;
+    --links-mid:  #4D5061;
+    --rechts-mod: #3F414F;
+    --rechts: #30323D;
+    --text: #e2e2e2;
 }
 
 * {
@@ -73,15 +73,15 @@ h2 {
 
 .content p {
     margin-top: 100px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 a {
     text-decoration: none;
-    color: var(--roze);
+    color: var(--text);
     margin-top: 50px;
     font-size: 2rem;
-    background-color: var(--text);
+    background-color: var(--links);
     height: 75px;
     width: 250px;
     display: flex;
@@ -91,13 +91,11 @@ a {
 }
 
 a:hover {
-    background-color: var(--roze);
+    background-color: var(--text);
     transition: background-color 0.3s ease-in-out;
     cursor: pointer;
-}
+    color: black;
 
-a:hover {
-    color: var(--text);
 }
 
 .balk:hover {
@@ -117,18 +115,18 @@ a:hover {
     transition-delay: 0s; /* No delay when becoming invisible */
 }
 
-.rood {
-    background-color: var(--rood);
-    }
-
-.paars {
-    background-color: var(--paars);
+.links {
+    background-color: var(--links);
 }
 
-.roze {
-    background-color: var(--roze);
+.linksmid {
+    background-color: var(--links-mid);
 }
 
-.groen {
-    background-color: var(--groen);
+.rechtsmid {
+    background-color: var(--rechts-mod);
+}
+
+.rechts {
+    background-color: var(--rechts);
 }

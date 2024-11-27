@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Luke Boscher</title>
+    <script src="https://kit.fontawesome.com/60e1a8883b.js" crossorigin="anonymous"></script>   
     <link rel="stylesheet" href="css/landingpage.css">
 </head>
 <body>
     <main>
-        <div class="balk rood" id="">
+        <div class="balk links" id="">
             <h2>About</h2>
             <div class="content">
                 <p>
@@ -19,16 +20,16 @@
                 </p>
             </div>
         </div>
-        <div class="balk groen" id="">
+        <div class="balk linksmid" id="">
             <h2>Portfolio</h2>
             <div class="content">
                 <p>
                     You can find my portfolio here!
                 </p>
-                <a href="portfolio.php">Portfolio</a>
+                <a href="login.php">Portfolio</a>
             </div>
         </div>
-        <div class="balk roze" id="">
+        <div class="balk rechtsmid" id="">
             <h2>Links</h2>
             <div class="content">
                 <p>
@@ -39,7 +40,7 @@
                 </p>
             </div>
         </div>
-        <div class="balk paars" id="">
+        <div class="balk rechts" id="">
             <h2>Contact</h2>
             <div class="content">
                 <p>

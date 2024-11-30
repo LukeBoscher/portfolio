@@ -1,3 +1,13 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+
+if (empty($_SESSION['name'])) {
+  header('Location: login.php');
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

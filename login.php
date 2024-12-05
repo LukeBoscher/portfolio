@@ -22,7 +22,7 @@ function login() {
       $fout = '<h4 class="foutmelding">Please enter a password</h4>';
     } elseif(!empty($_POST['password']) && $_POST['password'] == $password) {
       $_SESSION['name'] = $_POST['name'];
-      header('Location: content/projects.php');
+      header('Location: projects.php');
       exit;
     } elseif (!empty($_POST['password']) && $_POST['password'] != $password) {
       $fout = '<h4 class="foutmelding">Incorrect password</h4>';

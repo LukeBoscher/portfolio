@@ -45,6 +45,7 @@ if (!empty($_GET['pdf']) && array_key_exists($_GET['pdf'], $pdfs)) {
     
     <main>
       <div class="top">
+        <a href="pdf/CafeOUI.pdf" target="_blank">moi</a> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         <h2 id='pdftitle'>Assignments</h2>
         <div class="dropdown">
           <i class="fa-solid fa-bars"></i>

@@ -3,10 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
   session_start();
 }
 
-if (empty($_SESSION['name'])) {
-  header('Location: login.php');
-  exit;
-}
+unset($_SESSION['name']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -29,8 +29,8 @@ main {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 80vw; /* Adjusted to account for aside width */
-    margin-left: 20vw; /* Adjusted to account for aside width */
+    width: 90vw; /* Adjusted to account for aside width */
+    margin-left: 10vw; /* Adjusted to account for aside width */
     color: black;
     font-family: 'montserrat';
     color: var(--text);
@@ -146,7 +146,7 @@ display: block;
 }
 
 aside {
-    width: 20vw;
+    width: 10vw;
     height: 100vh;
     background-color: var(--grijste); /* grey background */
     position: fixed;
@@ -188,8 +188,8 @@ aside a:hover, .selected{
 }
 
 .top {
-    width: 80vw;
-    height: 10vh;
+    width: 90vw;
+    height: 7vh;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -197,5 +197,5 @@ aside a:hover, .selected{
     right: 0;
     top: 0;
     color: var(--text);
-    background-color: var(--grijste);
+    /* background-color: var(--grijste); */
 }

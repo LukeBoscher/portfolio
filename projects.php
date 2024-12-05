@@ -57,7 +57,7 @@ if (!empty($_GET['pdf']) && array_key_exists($_GET['pdf'], $pdfs)) {
       </div>
       <div class="pdfviewer">
           <?php
-          echo '<embed id="pdf-embed" src="pdf/'.$currentpdf.'" width="90%" height="100%">';
+          echo '<embed id="pdf-embed" src="pdf/'.$currentpdf.'">';
           ?>
       </div>
     </main>

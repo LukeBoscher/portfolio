@@ -1,3 +1,0 @@
-<?php foreach ($pdfs as $title => $file): ?>
-                  <a href="?pdf=<?php echo urlencode($title); ?>"><?php echo $title; ?></a>
-                <?php endforeach; ?>
